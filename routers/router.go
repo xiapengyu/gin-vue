@@ -24,6 +24,13 @@ func InitRouter() *gin.Engine {
 		code := e.PAGE_NOT_FOUND
 		c.JSON(404, gin.H{"code": code, "message": e.GetMsg(code)})
 	})
+	test := r.Group("/test")
+	{
+		test.GET("/apiTest", func(context *gin.Context) {
+			context.JSON(200, gin.H{"code":"200", "message":"请求成功"})
+		})
+	}
+
 	auth := r.Group("/auth")
 	{
 		// Refresh time can be longer than token timeout

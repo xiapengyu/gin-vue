@@ -14,5 +14,5 @@ const (
 	ERROR_AUTH_TOKEN               = 20003
 	ERROR_AUTH                     = 20004
 
-	PAGE_NOT_FOUND = 40001
+	PAGE_NOT_FOUND = 404
 )
